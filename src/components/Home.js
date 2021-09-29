@@ -13,8 +13,8 @@ export const Home = () => {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <svg className="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
-    
+            {/* <svg className="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg> */}
+    <img src="https://cdn.pixabay.com/photo/2016/11/02/17/19/keyboard-1792310_960_720.png" alt="" />
             <div className="container">
               <div className="carousel-caption text-start">
                 <h1>Online Chatting</h1>
@@ -24,8 +24,8 @@ export const Home = () => {
             </div>
           </div>
           <div className="carousel-item">
-            <svg className="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
-    
+            {/* <svg className="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg> */}
+    <img src="https://cdn.pixabay.com/photo/2019/06/19/07/13/email-4284157_960_720.png" alt="" />
             <div className="container">
               <div className="carousel-caption">
                 <h1>Online Chatting</h1>
@@ -35,8 +35,8 @@ export const Home = () => {
             </div>
           </div>
           <div className="carousel-item">
-            <svg className="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
-    
+            {/* <svg className="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg> */}
+    <img src="https://cdn.pixabay.com/photo/2021/01/27/11/01/office-desk-5954672_960_720.jpg" alt="" />
             <div className="container">
               <div className="carousel-caption text-end">
                 <h1>Online Chatting</h1>
