@@ -3,138 +3,75 @@ import '../stylesheets/home.css'
 
 export const Home = () => {
     return (
-        <div>
-  
-      <div id="myCarousel" className="carousel slide" data-bs-ride="carousel">
-        <div className="carousel-indicators">
-          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div className="carousel-inner">
-          <div className="carousel-item active">
-            {/* <svg className="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg> */}
-    <img src="https://cdn.pixabay.com/photo/2016/11/02/17/19/keyboard-1792310_960_720.png" alt="" />
-            <div className="container">
-              <div className="carousel-caption text-start">
-                <h1>Online Chatting</h1>
-                <p>Chatting through internet is one of the way to be able to communicate others.</p>
-                {/* <p><a className="btn btn-lg btn-primary" href="#">Sign up today</a></p> */}
-              </div>
-            </div>
-          </div>
-          <div className="carousel-item">
-            {/* <svg className="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg> */}
-    <img src="https://cdn.pixabay.com/photo/2019/06/19/07/13/email-4284157_960_720.png" alt="" />
-            <div className="container">
-              <div className="carousel-caption">
-                <h1>Online Chatting</h1>
-                <p>Online chatting has become increasingly popular.</p>
-                {/* <p><a className="btn btn-lg btn-primary" href="#">Learn more</a></p> */}
-              </div>
-            </div>
-          </div>
-          <div className="carousel-item">
-            {/* <svg className="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg> */}
-    <img src="https://cdn.pixabay.com/photo/2021/01/27/11/01/office-desk-5954672_960_720.jpg" alt="" />
-            <div className="container">
-              <div className="carousel-caption text-end">
-                <h1>Online Chatting</h1>
-                <p>A great advantage of the internet chatting that it brings people from all over the  globe closer together.</p>
-                {/* <p><a className="btn btn-lg btn-primary" href="#">Browse gallery</a></p> */}
-              </div>
-            </div>
-          </div>
-        </div>
-        <button className="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button className="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Next</span>
-        </button>
-      </div>
-    
-  
-    
-      <div className="container marketing">
-    
-        
-        <div className="row">
-          <div className="col-lg-4">
-            <svg className="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-    
-            <h2>Heading</h2>
-            <p>Chatting online is the best way for me to keep in touch with my friends especially Chinese friends. Since I’m far away from my Chinese friends, the only way for me to get enough information about them is through the Internet.</p>
-            <p><a className="btn btn-secondary" href="#">View details &raquo;</a></p>
-          </div>
-          <div className="col-lg-4">
-            <svg className="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-    
-            <h2>Heading</h2>
-            <p>We can chat with each other whenever we want to and as long as we can. Even sometimes, I couldn’t see the one I want to chat to then I could leave a message so my friend could see that when he/she logged on next time.</p>
-            <p><a className="btn btn-secondary" href="#">View details &raquo;</a></p>
-          </div>
-          <div className="col-lg-4">
-            <svg className="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-    
-            <h2>Heading</h2>
-            <p> I would log on MSN or QQ and then chat with friends or my family. I like chatting online in two reasons; one is that I can keep in touch with my Chinese friends the other is that I may save amount of money in the way of talking with my family online..</p>
-            <p><a className="btn btn-secondary" href="#">View details &raquo;</a></p>
-          </div>
-        </div>
-    
-    
-    
-        <hr className="featurette-divider"/>
-    
-        <div className="row featurette">
-          <div className="col-md-7">
-            <h2 className="featurette-heading">Online chatting</h2>
-            <p className="lead">chatting online offers me such convenient like keeping in touch with friends and families. Then I don’t need to worry that I would be far away from them some day.</p>
-          </div>
-          <div className="col-md-5">
-            <svg className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-    
-          </div>
-        </div>
-    
-        <hr className="featurette-divider"/>
-    
-        <div className="row featurette">
-          <div className="col-md-7 order-md-2">
-            <h2 className="featurette-heading">Online chatting</h2>
-            <p className="lead">Chatting is one of the most popular activities on the internet and involves people from all walks of life and just about all ages to come together in areas where they can join in on a variety of topics that they are interested in with people all around the world.</p>
-          </div>
-          <div className="col-md-5 order-md-1">
-            <svg className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-    
-          </div>
-        </div>
-    
-        {/* <hr className="featurette-divider"/> */}
-    
-        {/* <div className="row featurette">
-          <div className="col-md-7">
-            <h2 className="featurette-heading">And lastly, this one. <span className="text-muted">Checkmate.</span></h2>
-            <p className="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
-          </div>
-          <div className="col-md-5">
-            <svg className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-    
-          </div>
-        </div> */}
-    
-        <hr className="featurette-divider"/>
-    
-        
-    
-      </div>
-    
-    
-      
-      <footer className="container">
+      <div>
+<div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
+  <div className="carousel-inner">
+    <div className="carousel-item active">
+      <img src="https://cdn.pixabay.com/photo/2016/09/11/05/34/whatsapp-interface-1660652_960_720.png" className="d-block w-100" alt="..."/>
+    </div>
+    <div className="carousel-item">
+      <img src="https://cdn.pixabay.com/photo/2019/09/07/02/56/background-4457839_960_720.png" className="d-block w-100" alt="..."/>
+    </div>
+    <div className="carousel-item">
+      <img src="https://cdn.pixabay.com/photo/2018/08/07/10/24/chatbot-3589528_960_720.jpg" className="d-block w-100" alt="..."/>
+    </div>
+  </div>
+  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span className="visually-hidden">Previous</span>
+  </button>
+  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+    <span className="visually-hidden">Next</span>
+  </button>
+</div>
+<hr />
+
+<button className="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+  info button
+</button>
+
+<div className="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div className="offcanvas-header">
+    <h2 className="offcanvas-title" id="offcanvasExampleLabel">The Basics info</h2>
+    <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div className="offcanvas-body">
+    <div>
+    Log in first then go to the chat room....
+   <h3><b>Username:</b></h3>  and Password Guidelines
+Keep your account safe and secure! Do not share your username and password with anyone. Use the following guidelines for creating a secure username and password.
+
+Username
+Your username:
+
+Must be between six and 50 characters long.
+Can contain any letters from a to z and any numbers from 0 through 9.
+Password
+<h3><b>Your password:</b></h3>
+
+Must be between eight and 32 characters long.
+Must include at least one number or special character and one letter.
+<h3><b>Password Security:</b></h3>
+To help make your password more secure:
+
+Do not include in it any personal information, such as your first name, last name, username, or birth date. Avoid regular words from a dictionary.
+Replace letters with numbers. You might use the number 3 instead of an e, a 1 instead of an i, or a zero instead of an o. For example: b0st0ndud3 (bostondude) or 1mag1n3that (imaginethat).
+Create a phrase instead of just one word (for example, MyGrade100).
+    </div>
+  </div>
+</div>
+<hr />
+
+<h1 className="text-center"><b>Online chatting</b></h1>
+
+
+<p className="text-start">Online chatting has become increasingly popular. Individuals are no longer hindered from communicating with each other due to physical barriers such as distance , borders or sea. The most common place for people to chat is in chat rooms. Many people , especially youngsters , use 'messenger' services like 'Facebook Messenger' and the newest is 'Whatsapp Messenger' to chat. However , there are advantages and disadvantages of online chatting.</p>
+<p className="text-center">In addition , chatting with others in terms of studies helps students to understand different points of view and leads to abetter understanding of what is available in terms of online resources. Meeting with individuals from different towns , cultures , and countries on the Internet and yhe exchanging ideas and thoughts can widen a chatter's horizon. Similarly , chatting to people abroad gives a wider appreciation of global's events and deeper understanding of the impact of local and international decision making. From chatting with our Internet acquaintances, our storehpuse of knowledge of other cultures and countries will improve.</p>
+<p className="text-start"> I use the internet to chat with my friends and my family. Everyone chats online for different reasons. Chatting online is a worldwide thing which everyone enjoys.The internet is a worldwide thing. Everyone uses it. Chatting online is not only for teenagers but for everyone who wants to chat. Teens chat with their friends everyday or every weekend. Sometimes people chat online with their long distance friends who live far away from them. Online chat is a common thing to anyone.
+</p>
+<hr />
+<footer className="container">
         <p className="float-end"><a href="#">Back to top</a></p>
         <p>&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
       </footer>
@@ -145,6 +82,6 @@ export const Home = () => {
     
           
       
-       </div>
+      </div>
     )
 }

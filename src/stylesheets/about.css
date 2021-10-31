@@ -22,6 +22,7 @@ body {
 .people-list {
   width:260px;
   float: left;
+}
   
   .search {
     padding: 20px;
@@ -49,9 +50,9 @@ body {
     
     
     
-    li {
-      padding-bottom: 20px;
-    }
+  }
+  li {
+    padding-bottom: 20px;
   }
   
   img {
