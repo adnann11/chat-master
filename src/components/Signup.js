@@ -1,44 +1,98 @@
-import React from 'react'
+import { Formik } from 'formik';
+import Swal from 'sweetalert2';
+import app_config from '../config';
 
 const Signup = () => {
+
+    const url = app_config.api_url;
+    const signupform = {
+        name: '',
+        email: '',
+        password: '',
+        confirm_password: ''
+    }
+
+    const signupSubmit = (values) => {
+        console.log(values);
+
+        const reqOptions = {
+            method: 'POST',
+            body: JSON.stringify(values),
+            headers: { 'Content-Type': 'application/json' }
+        }
+
+        fetch(url + '/user/add', reqOptions)
+            .then((res) => {
+                console.log(res.status);
+
+                if (res.status == 200) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Signed Up!',
+                        text: 'You have successfully Registered'
+                    });
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error!',
+                        text: 'Something went wrong'
+                    });
+                }
+
+                return res.json();
+            })
+            .then((data) => {
+                console.log(data);
+            })
+
+    }
+
     return (
-        <div>
-            <body class="text-center">
-          <main className="form-signin">
-  <form>
-    <img className="mb-4" src="https://cdn.pixabay.com/photo/2016/11/08/15/21/user-1808597_960_720.png" alt="" width="72" height="57"/>
-    <h1 className="h3 mb-3 fw-normal">Please sign up</h1>
+        <div className = "bgsignup" >
+        <div className="row mt-5">
+        <div className="col-md-5 mx-auto">
+                <div className="card h-100">
+                    <div className="card-body my-card-body" >
 
-    <div className="form-floating">
-      <input type="name" className="form-control" id="floatingInput" placeholder="name@example.com"/>
-      <label for="floatingInput">Name</label>
-    </div>
-    <div className="form-floating">
-      <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com"/>
-      <label for="floatingInput">Email address</label>
-    </div>
-    <div className="form-floating">
-      <input type="password" className="form-control" id="floatingPassword" placeholder="Password"/>
-      <label for="floatingPassword">Password</label>
-    </div>
-    <div className="form-floating">
-      <input type="cpassword" className="form-control" id="floatingPassword" placeholder="Password"/>
-      <label for="floatingPassword">Confirm Password</label>
-    </div>
+                        <h3 className="text-center">SIGN UP HERE </h3>
+                        <hr />
 
+                        <Formik initialValues={signupform} onSubmit={signupSubmit} >
+                            {({
+                                values,
+                                handleChange,
+                                handleSubmit
+                            }) => (
+                                <form onSubmit={handleSubmit}>
+                                    <label>Name</label>
+                                    <input className="form-control" type="text"
+                                        placeholder="name" id="name" value={values.name} onChange={handleChange} />
 
-    <div className="checkbox mb-3">
-      <label>
-        <input type="checkbox" value="remember-me"/> Remember me
-      </label>
-    </div>
-    <button className="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
-    <p className="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
-  </form>
-</main>
-</body>
+                                    <label>Email</label>
+                                    <input className="form-control" type="email"
+                                        placeholder="email" id="email" value={values.email} onChange={handleChange} />
+
+                                    <label>Password</label>
+                                    <input className="form-control" type="password"
+                                        placeholder="password" id="password" value={values.password} onChange={handleChange} />
+
+                                        <label> Confirm-Password</label>
+                                    <input className="form-control" type="password"
+                                        placeholder=" confirm_password" id="confirm_password" value={values.Confirm_password} onChange={handleChange} />
+
+                                    <button type="submit" className="btn mt-5 w-100 bt">SIGN UP</button>
+
+                                </form>
+                            )}
+                        </Formik>
+
+                    </div>
+                </div>
+        </div>
+            </div>
+            
         </div>
     )
 }
 
-export default Signup
+export default Signup;

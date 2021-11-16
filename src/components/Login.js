@@ -1,110 +1,93 @@
-import logo from '../images/logo.png';
-import { makeStyles } from '@material-ui/core';
-import clsx from 'clsx';
-import '../stylesheets/login.css';
-import { Formik } from 'formik';
-import app_config from '../config';
-import Swal from 'sweetalert2';
-
-const myStyles = makeStyles(() => ({
-    mycard: {
-        marginTop: '10rem',
-        boxShadow: '0px 6px 6px -3px rgba(0,0,0,0.2),0px 10px 14px 1px rgba(0,0,0,0.14),0px 4px 18px 3px rgba(0,0,0,0.12)'
-    }
-}))
+import { Formik } from "formik";
+import { useEffect, useState } from "react";
+import Swal from "sweetalert2";
+import app_config from "../config";
+import "./login.css";
 
 const Login = () => {
 
     const url = app_config.api_url;
-    const classes = myStyles();
+    const [mystate, setMystate] = useState("not intiliazed");
+
+    useEffect(() => {
+
+        setMystate('Initilized');
+        console.log('Inside UseEffect');
+
+
+    }, [])
 
     const loginform = {
         email: '',
         password: ''
     }
 
-    const formSubmit = (values) => {
+    const SubmitLogin = (values) => {
+        console.log(values);
+        const reqOptions = {
+            method: 'POST',
+            body: JSON.stringify(values),
+            headers: { 'Content-Type': 'application/json' }
+        }
+        fetch(url + '/user/login', reqOptions)
+        .then((res) => {
+            console.log(res.status);
 
-        fetch(url + 'user/getbyemail/' + values.email)
-            .then(res => res.json())
-            .then(data => {
-                if (data) {
+            if (res.status == 200 ) {
+                res.json()
+                .then((data) => {
+                    sessionStorage.setItem('user',JSON.stringify(data));
                     console.log(data);
-
-                    if (data.password == values.password) {
-                        console.log('login success');
-
-                        Swal.fire({
-                            icon: 'success',
-                            title: 'Login Success',
-                        })
-
-                        sessionStorage.setItem('user', JSON.stringify(data));
-                        window.location.replace('/product');
-
-                        return
-                    }
-                }
-
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Email or Password Incorrect'
+                    window.location.replace('/chat')
                 })
 
-            })
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Signed Up!',
+                    text: 'You have successfully Registered'
+                });
+            } else if(res.status==300) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error!',
+                    text: 'Something went wrong'
+                });
+            }
 
-
-    }
-
+            return res.json();
+        })
+       
+}
 
     return (
-        <div>
-            <div className="col-md-3 mx-auto" >
-                <div className={clsx('card', classes.mycard)} style={{ marginTop: '10rem' }}>
-                    <div className="card-body">
+       <div className = "bglogin">
+        <div className="col-md-3 mx-auto">
+            <div className="card" style={{ marginTop: '10rem', border: 'none', boxShadow: '0px 4px 5px -2px rgba(0,0,0,0.2),0px 7px 10px 1px rgba(0,0,0,0.14),0px 2px 16px 1px rgba(0,0,0,0.12)' }}>
+                <div className="card-body">
 
-                        <div className="col-md-2 mx-auto mt-4">
-                            <img src={logo} className="img-fluid" />
-                        </div>
+                    <h3 className="mt-5 text-center">Login Form</h3>
+                    <hr />
 
-
-                        <Formik
-                            initialValues={loginform}
-                            onSubmit={formSubmit}
-                        >{({
-                            values,
-                            handleChange,
-                            handleSubmit
+                    <Formik initialValues={loginform} onSubmit={SubmitLogin}>
+                        {({
+                            values, handleChange, handleSubmit
                         }) => (
                             <form onSubmit={handleSubmit}>
-                                <label className="mt-5 w-100">Email</label>
-                                <input className="form-control" onChange={handleChange} value={values.email} name="email" />
+                                <label className="mt-3" htmlFor="email">Email</label>
+                                <input id="email" className="form-control" type="email" value={values.email} onChange={handleChange} />
 
-                                <label className="mt-4">Password</label>
-                                <input className="form-control" onChange={handleChange} value={values.password} type="password" name="password" />
+                                <label className="mt-3" htmlFor="password">Password</label>
+                                <input id="password" className="form-control" type="password" value={values.password} onChange={handleChange} />
 
-                                <button type="submit" className="mt-5 btn btn-primary w-100">Login Now</button>
+                                <button className="btn mt-5 w-100 bt">SUBMIT</button>
                             </form>
                         )}
-
-
-                        </Formik>
-
-
-
-                        <hr className="mt-4" />
-                        <a href="#">Forgot Password</a>
-                        <div className="float-end">
-                            <a href="#">Not Registered Yet?</a>
-                        </div>
-
-                    </div>
+                    </Formik>
                 </div>
             </div>
-
+        </div>
         </div>
     )
 }
-
 
 export default Login;
